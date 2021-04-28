@@ -3,13 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0319C5EEBC15C2958697F187 /* Pods_AppChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9407C84CF7AB110568891C25 /* Pods_AppChallengeTests.framework */; };
 		107D07242639B1C300F2BCCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107D07232639B1C300F2BCCC /* AppDelegate.swift */; };
-		107D07262639B1C300F2BCCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107D07252639B1C300F2BCCC /* SceneDelegate.swift */; };
 		107D07282639B1C300F2BCCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107D07272639B1C300F2BCCC /* ViewController.swift */; };
 		107D072B2639B1C300F2BCCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 107D07292639B1C300F2BCCC /* Main.storyboard */; };
 		107D072D2639B1C500F2BCCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 107D072C2639B1C500F2BCCC /* Assets.xcassets */; };
@@ -18,6 +17,23 @@
 		107D07462639B1C500F2BCCC /* AppChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107D07452639B1C500F2BCCC /* AppChallengeUITests.swift */; };
 		107D075E2639B21C00F2BCCC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 107D075D2639B21C00F2BCCC /* Login.storyboard */; };
 		107D07632639B24000F2BCCC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107D07622639B24000F2BCCC /* LoginViewController.swift */; };
+		107D07862639B50600F2BCCC /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107D07852639B50600F2BCCC /* TextFieldView.swift */; };
+		107D078B2639B51200F2BCCC /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107D078A2639B51200F2BCCC /* TextFieldView.xib */; };
+		107D07912639B58600F2BCCC /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 107D07902639B58600F2BCCC /* Color.xcassets */; };
+		107D079F2639B62400F2BCCC /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 107D07992639B62400F2BCCC /* Lato-Italic.ttf */; };
+		107D07A02639B62400F2BCCC /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 107D079A2639B62400F2BCCC /* Lato-BoldItalic.ttf */; };
+		107D07A12639B62400F2BCCC /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 107D079B2639B62400F2BCCC /* Lato-LightItalic.ttf */; };
+		107D07A22639B62400F2BCCC /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 107D079C2639B62400F2BCCC /* Lato-Regular.ttf */; };
+		107D07A32639B62400F2BCCC /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 107D079D2639B62400F2BCCC /* Lato-Light.ttf */; };
+		107D07A42639B62400F2BCCC /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 107D079E2639B62400F2BCCC /* Lato-Bold.ttf */; };
+		107D07AB2639B68900F2BCCC /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107D07A92639B68900F2BCCC /* NibLoadable.swift */; };
+		107D07AC2639B68900F2BCCC /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107D07AA2639B68900F2BCCC /* BindableType.swift */; };
+		107D07BB2639C34C00F2BCCC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107D07BA2639C34C00F2BCCC /* R.generated.swift */; };
+		107D07C22639C3BF00F2BCCC /* SharedAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107D07C12639C3BF00F2BCCC /* SharedAssembler.swift */; };
+		107D07CA2639C3EE00F2BCCC /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107D07C92639C3EE00F2BCCC /* LoginAssembly.swift */; };
+		107D07CF2639C48100F2BCCC /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107D07CE2639C48100F2BCCC /* Scene.swift */; };
+		107D07D42639C49500F2BCCC /* Scene+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107D07D32639C49500F2BCCC /* Scene+UIViewController.swift */; };
+		107D07DD2639C53B00F2BCCC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107D07DC2639C53B00F2BCCC /* LoginViewModel.swift */; };
 		92B90976310199784FD9399C /* Pods_AppChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31EF7DC08E2F5E97681D71CA /* Pods_AppChallenge.framework */; };
 		9E6A60749137E5F0A175BE90 /* Pods_AppChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8933EFC337558023FBF27E80 /* Pods_AppChallengeUITests.framework */; };
 /* End PBXBuildFile section */
@@ -42,7 +58,6 @@
 /* Begin PBXFileReference section */
 		107D07202639B1C300F2BCCC /* AppChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		107D07232639B1C300F2BCCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		107D07252639B1C300F2BCCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		107D07272639B1C300F2BCCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		107D072A2639B1C300F2BCCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		107D072C2639B1C500F2BCCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +71,23 @@
 		107D07472639B1C500F2BCCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		107D075D2639B21C00F2BCCC /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		107D07622639B24000F2BCCC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		107D07852639B50600F2BCCC /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		107D078A2639B51200F2BCCC /* TextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldView.xib; sourceTree = "<group>"; };
+		107D07902639B58600F2BCCC /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		107D07992639B62400F2BCCC /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		107D079A2639B62400F2BCCC /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		107D079B2639B62400F2BCCC /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		107D079C2639B62400F2BCCC /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		107D079D2639B62400F2BCCC /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		107D079E2639B62400F2BCCC /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		107D07A92639B68900F2BCCC /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibLoadable.swift; path = AppChallenge/Protocols/NibLoadable.swift; sourceTree = SOURCE_ROOT; };
+		107D07AA2639B68900F2BCCC /* BindableType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BindableType.swift; path = AppChallenge/Protocols/BindableType.swift; sourceTree = SOURCE_ROOT; };
+		107D07BA2639C34C00F2BCCC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		107D07C12639C3BF00F2BCCC /* SharedAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedAssembler.swift; sourceTree = "<group>"; };
+		107D07C92639C3EE00F2BCCC /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
+		107D07CE2639C48100F2BCCC /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		107D07D32639C49500F2BCCC /* Scene+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene+UIViewController.swift"; sourceTree = "<group>"; };
+		107D07DC2639C53B00F2BCCC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		1D548C5677875133D4A1E320 /* Pods-AppChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-AppChallengeTests/Pods-AppChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		31EF7DC08E2F5E97681D71CA /* Pods_AppChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AFB0FD78BB59900D55F62A6 /* Pods-AppChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-AppChallengeTests/Pods-AppChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,11 +155,12 @@
 			isa = PBXGroup;
 			children = (
 				107D07572639B1EA00F2BCCC /* Features */,
+				107D078F2639B57100F2BCCC /* Resources */,
+				107D07BF2639C39800F2BCCC /* Utilities */,
+				107D07A82639B66700F2BCCC /* Protocols */,
 				107D07232639B1C300F2BCCC /* AppDelegate.swift */,
-				107D07252639B1C300F2BCCC /* SceneDelegate.swift */,
 				107D07272639B1C300F2BCCC /* ViewController.swift */,
 				107D07292639B1C300F2BCCC /* Main.storyboard */,
-				107D072C2639B1C500F2BCCC /* Assets.xcassets */,
 				107D072E2639B1C500F2BCCC /* LaunchScreen.storyboard */,
 				107D07312639B1C500F2BCCC /* Info.plist */,
 			);
@@ -155,6 +188,7 @@
 		107D07572639B1EA00F2BCCC /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				107D07DB2639C51500F2BCCC /* Common */,
 				107D075B2639B1F300F2BCCC /* Login */,
 				107D075C2639B1F800F2BCCC /* Home */,
 			);
@@ -166,6 +200,7 @@
 			children = (
 				107D075D2639B21C00F2BCCC /* Login.storyboard */,
 				107D07622639B24000F2BCCC /* LoginViewController.swift */,
+				107D07DC2639C53B00F2BCCC /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -175,6 +210,67 @@
 			children = (
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		107D078F2639B57100F2BCCC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				107D07BA2639C34C00F2BCCC /* R.generated.swift */,
+				107D07952639B5FB00F2BCCC /* Fonts */,
+				107D072C2639B1C500F2BCCC /* Assets.xcassets */,
+				107D07902639B58600F2BCCC /* Color.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		107D07952639B5FB00F2BCCC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				107D079E2639B62400F2BCCC /* Lato-Bold.ttf */,
+				107D079A2639B62400F2BCCC /* Lato-BoldItalic.ttf */,
+				107D07992639B62400F2BCCC /* Lato-Italic.ttf */,
+				107D079D2639B62400F2BCCC /* Lato-Light.ttf */,
+				107D079B2639B62400F2BCCC /* Lato-LightItalic.ttf */,
+				107D079C2639B62400F2BCCC /* Lato-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		107D07A82639B66700F2BCCC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				107D07AA2639B68900F2BCCC /* BindableType.swift */,
+				107D07A92639B68900F2BCCC /* NibLoadable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		107D07BF2639C39800F2BCCC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				107D07CE2639C48100F2BCCC /* Scene.swift */,
+				107D07D32639C49500F2BCCC /* Scene+UIViewController.swift */,
+				107D07C02639C3A500F2BCCC /* Assembly */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		107D07C02639C3A500F2BCCC /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				107D07C12639C3BF00F2BCCC /* SharedAssembler.swift */,
+				107D07C92639C3EE00F2BCCC /* LoginAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		107D07DB2639C51500F2BCCC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				107D07852639B50600F2BCCC /* TextFieldView.swift */,
+				107D078A2639B51200F2BCCC /* TextFieldView.xib */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		2862FB44BDD02933F63B480C /* Pods */ = {
@@ -189,7 +285,6 @@
 				B6F8268DB5E7A52400CAED0C /* Pods-AppChallengeUITests.debug.xcconfig */,
 				A713209B406B8546B91AED01 /* Pods-AppChallengeUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -211,6 +306,7 @@
 			buildConfigurationList = 107D074A2639B1C600F2BCCC /* Build configuration list for PBXNativeTarget "AppChallenge" */;
 			buildPhases = (
 				552FD8FB8A7FF19A2FAFD365 /* [CP] Check Pods Manifest.lock */,
+				107D07B32639C1C100F2BCCC /* R.swift */,
 				107D071C2639B1C300F2BCCC /* Sources */,
 				107D071D2639B1C300F2BCCC /* Frameworks */,
 				107D071E2639B1C300F2BCCC /* Resources */,
@@ -312,10 +408,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				107D078B2639B51200F2BCCC /* TextFieldView.xib in Resources */,
+				107D079F2639B62400F2BCCC /* Lato-Italic.ttf in Resources */,
 				107D075E2639B21C00F2BCCC /* Login.storyboard in Resources */,
+				107D07A32639B62400F2BCCC /* Lato-Light.ttf in Resources */,
+				107D07A02639B62400F2BCCC /* Lato-BoldItalic.ttf in Resources */,
 				107D07302639B1C500F2BCCC /* LaunchScreen.storyboard in Resources */,
 				107D072D2639B1C500F2BCCC /* Assets.xcassets in Resources */,
+				107D07A42639B62400F2BCCC /* Lato-Bold.ttf in Resources */,
 				107D072B2639B1C300F2BCCC /* Main.storyboard in Resources */,
+				107D07A22639B62400F2BCCC /* Lato-Regular.ttf in Resources */,
+				107D07A12639B62400F2BCCC /* Lato-LightItalic.ttf in Resources */,
+				107D07912639B58600F2BCCC /* Color.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +440,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		107D07B32639C1C100F2BCCC /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		552FD8FB8A7FF19A2FAFD365 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -461,9 +585,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				107D07632639B24000F2BCCC /* LoginViewController.swift in Sources */,
+				107D07BB2639C34C00F2BCCC /* R.generated.swift in Sources */,
+				107D07CF2639C48100F2BCCC /* Scene.swift in Sources */,
 				107D07282639B1C300F2BCCC /* ViewController.swift in Sources */,
 				107D07242639B1C300F2BCCC /* AppDelegate.swift in Sources */,
-				107D07262639B1C300F2BCCC /* SceneDelegate.swift in Sources */,
+				107D07AC2639B68900F2BCCC /* BindableType.swift in Sources */,
+				107D07C22639C3BF00F2BCCC /* SharedAssembler.swift in Sources */,
+				107D07AB2639B68900F2BCCC /* NibLoadable.swift in Sources */,
+				107D07DD2639C53B00F2BCCC /* LoginViewModel.swift in Sources */,
+				107D07CA2639C3EE00F2BCCC /* LoginAssembly.swift in Sources */,
+				107D07862639B50600F2BCCC /* TextFieldView.swift in Sources */,
+				107D07D42639C49500F2BCCC /* Scene+UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,7 +701,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -624,7 +756,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -642,6 +774,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AppChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -649,7 +782,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tric.AppChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -661,6 +794,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AppChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -668,7 +802,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tric.AppChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
