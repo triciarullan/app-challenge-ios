@@ -1,3 +1,52 @@
-PODFILE CHECKSUM: 27dfa1f4723a3a471e24daef8ff64121aa9874cd
+PODS:
+  - Alamofire (5.4.3)
+  - KeychainAccess (4.2.2)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - R.swift (5.1.0):
+    - R.swift.Library (~> 5.1.0)
+  - R.swift.Library (5.1.0)
+  - SnapKit (5.0.1)
+  - SVProgressHUD (2.2.5)
+  - Swinject (2.6.2)
+  - SwinjectStoryboard (2.2.0):
+    - Swinject (~> 2.6)
+
+DEPENDENCIES:
+  - Alamofire
+  - KeychainAccess
+  - Moya
+  - R.swift (~> 5.1.0)
+  - SnapKit
+  - SVProgressHUD
+  - Swinject (~> 2.6.0)
+  - SwinjectStoryboard
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - KeychainAccess
+    - Moya
+    - R.swift
+    - R.swift.Library
+    - SnapKit
+    - SVProgressHUD
+    - Swinject
+    - SwinjectStoryboard
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
+  R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  Swinject: cf7458774b1b00323080a9c67e47a1ee7f9d2af1
+  SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
+
+PODFILE CHECKSUM: c9070be3e1c6d65411f5c6e6c9301456e9ed5306
 
 COCOAPODS: 1.10.1
