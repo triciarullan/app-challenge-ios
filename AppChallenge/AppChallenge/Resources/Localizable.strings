@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  AppChallenge
+
+  Created by Tric Rullan on 4/29/21.
+  
+*/
+
+"Loading" = "Loading";
+"Ok" = "Ok";
+
+"Username" = "Username";
+"Password" = "Password";
+
+"Login Error" = "Login Error";
+"Your username or password is incorrect. Kindly check and try again." = "Your username or password is incorrect. Kindly check and try again.";

@@ -4,10 +4,16 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="dAp-re-Dgs">
@@ -16,16 +22,74 @@
                     <view key="view" contentMode="scaleToFill" id="W3j-kS-c29">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jtD-cE-wBs" customClass="TextFieldView" customModule="AppChallenge" customModuleProvider="target">
+                                <rect key="frame" x="30" y="147.5" width="354" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fgm-NY-ySp"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pYF-Pf-5v2" customClass="TextFieldView" customModule="AppChallenge" customModuleProvider="target">
+                                <rect key="frame" x="30" y="217.5" width="354" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="C5K-aA-OG8"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPu-An-BCx">
+                                <rect key="frame" x="30" y="317.5" width="354" height="50"/>
+                                <color key="backgroundColor" name="cello"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="81I-aD-Gor"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="LOGIN"/>
+                                <connections>
+                                    <action selector="didTapLoginButton:" destination="k4J-YQ-aAb" eventType="touchUpInside" id="srC-ep-I58"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APP CHALLENGE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djh-b4-F7z">
+                                <rect key="frame" x="20" y="94" width="374" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                <color key="textColor" name="cello"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="C06-1I-DCQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jtD-cE-wBs" firstAttribute="top" secondItem="djh-b4-F7z" secondAttribute="bottom" constant="30" id="0aR-Hk-I3L"/>
+                            <constraint firstItem="jtD-cE-wBs" firstAttribute="leading" secondItem="C06-1I-DCQ" secondAttribute="leading" constant="30" id="1rR-YN-c8j"/>
+                            <constraint firstItem="yPu-An-BCx" firstAttribute="top" secondItem="pYF-Pf-5v2" secondAttribute="bottom" constant="50" id="77f-mu-QUO"/>
+                            <constraint firstItem="C06-1I-DCQ" firstAttribute="trailing" secondItem="jtD-cE-wBs" secondAttribute="trailing" constant="30" id="DFz-8P-cqo"/>
+                            <constraint firstItem="djh-b4-F7z" firstAttribute="centerX" secondItem="W3j-kS-c29" secondAttribute="centerX" id="IyP-PI-EjF"/>
+                            <constraint firstItem="yPu-An-BCx" firstAttribute="leading" secondItem="C06-1I-DCQ" secondAttribute="leading" constant="30" id="OMA-Um-FrX"/>
+                            <constraint firstItem="C06-1I-DCQ" firstAttribute="trailing" secondItem="yPu-An-BCx" secondAttribute="trailing" constant="30" id="UCn-OK-K8y"/>
+                            <constraint firstItem="pYF-Pf-5v2" firstAttribute="leading" secondItem="C06-1I-DCQ" secondAttribute="leading" constant="30" id="Wci-WF-fb6"/>
+                            <constraint firstItem="djh-b4-F7z" firstAttribute="top" secondItem="C06-1I-DCQ" secondAttribute="top" constant="50" id="XwA-Vg-wNf"/>
+                            <constraint firstItem="C06-1I-DCQ" firstAttribute="trailing" secondItem="djh-b4-F7z" secondAttribute="trailing" constant="20" id="jxF-nC-W3b"/>
+                            <constraint firstItem="pYF-Pf-5v2" firstAttribute="top" secondItem="jtD-cE-wBs" secondAttribute="bottom" constant="20" id="m4g-od-4qM"/>
+                            <constraint firstItem="djh-b4-F7z" firstAttribute="leading" secondItem="C06-1I-DCQ" secondAttribute="leading" constant="20" id="mTd-mN-QGd"/>
+                            <constraint firstItem="C06-1I-DCQ" firstAttribute="trailing" secondItem="pYF-Pf-5v2" secondAttribute="trailing" constant="30" id="xkd-ym-Aa8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="yPu-An-BCx" id="Xzf-Vf-c6F"/>
+                        <outlet property="passwordTextFieldView" destination="pYF-Pf-5v2" id="X0t-EU-KL6"/>
+                        <outlet property="usernameTextFieldView" destination="jtD-cE-wBs" id="e31-9I-GWs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUw-3y-nxG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-99" y="-42"/>
+            <point key="canvasLocation" x="-100.00000000000001" y="-42.1875"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="cello">
+            <color red="0.20784313725490194" green="0.28627450980392155" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
