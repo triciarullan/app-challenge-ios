@@ -11,6 +11,8 @@
 		10740CD0263B01DE004DF4E6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 10740CCF263B01DE004DF4E6 /* Localizable.strings */; };
 		10740CD5263B0B04004DF4E6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10740CD4263B0B04004DF4E6 /* BaseViewController.swift */; };
 		10740CDA263B0B86004DF4E6 /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10740CD9263B0B86004DF4E6 /* UIAlertController+.swift */; };
+		10740CE0263B0D0E004DF4E6 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10740CDF263B0D0E004DF4E6 /* DatabaseManager.swift */; };
+		10740CFA263B13F3004DF4E6 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10740CF9263B13F3004DF4E6 /* Person.swift */; };
 		107D07242639B1C300F2BCCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107D07232639B1C300F2BCCC /* AppDelegate.swift */; };
 		107D072D2639B1C500F2BCCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 107D072C2639B1C500F2BCCC /* Assets.xcassets */; };
 		107D07302639B1C500F2BCCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 107D072E2639B1C500F2BCCC /* LaunchScreen.storyboard */; };
@@ -61,6 +63,8 @@
 		10740CCF263B01DE004DF4E6 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		10740CD4263B0B04004DF4E6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		10740CD9263B0B86004DF4E6 /* UIAlertController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+.swift"; sourceTree = "<group>"; };
+		10740CDF263B0D0E004DF4E6 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		10740CF9263B13F3004DF4E6 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		107D07202639B1C300F2BCCC /* AppChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		107D07232639B1C300F2BCCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		107D072C2639B1C500F2BCCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -132,6 +136,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10740CDE263B0CFC004DF4E6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				10740CDF263B0D0E004DF4E6 /* DatabaseManager.swift */,
+				10740CF9263B13F3004DF4E6 /* Person.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		107D07172639B1C300F2BCCC = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +169,7 @@
 		107D07222639B1C300F2BCCC /* AppChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				10740CDE263B0CFC004DF4E6 /* Services */,
 				107D07EE2639C7FF00F2BCCC /* Extensions */,
 				107D07572639B1EA00F2BCCC /* Features */,
 				107D078F2639B57100F2BCCC /* Resources */,
@@ -592,6 +606,7 @@
 				107D07BB2639C34C00F2BCCC /* R.generated.swift in Sources */,
 				107D07F02639C80A00F2BCCC /* UIView+.swift in Sources */,
 				107D07CF2639C48100F2BCCC /* Scene.swift in Sources */,
+				10740CE0263B0D0E004DF4E6 /* DatabaseManager.swift in Sources */,
 				107D07242639B1C300F2BCCC /* AppDelegate.swift in Sources */,
 				10740CD5263B0B04004DF4E6 /* BaseViewController.swift in Sources */,
 				107D07AC2639B68900F2BCCC /* BindableType.swift in Sources */,
@@ -601,6 +616,7 @@
 				107D07DD2639C53B00F2BCCC /* LoginViewModel.swift in Sources */,
 				107D07CA2639C3EE00F2BCCC /* LoginAssembly.swift in Sources */,
 				107D07862639B50600F2BCCC /* TextFieldView.swift in Sources */,
+				10740CFA263B13F3004DF4E6 /* Person.swift in Sources */,
 				107D07D42639C49500F2BCCC /* Scene+UIViewController.swift in Sources */,
 				10740CDA263B0B86004DF4E6 /* UIAlertController+.swift in Sources */,
 			);

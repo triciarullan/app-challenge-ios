@@ -32,8 +32,10 @@ protocol LoginViewModelType {
 
 class LoginViewModel: LoginViewModelType {
 
-  init() {
+  init(databaseManager: DatabaseManagerType = DatabaseManager()) {
+    self.databaseManager = databaseManager
     
+    savePersons()
   }
   
   func getUserNameTextFieldViewModel() -> TextViewModel {
@@ -56,14 +58,42 @@ class LoginViewModel: LoginViewModelType {
           let password = password, !password.isEmpty else {
       let usernameColor: UIColor = self.username?.isEmpty ?? true ? R.color.warning()! : R.color.osloGrey()!
       let passwordColor: UIColor = self.password?.isEmpty ?? true ? R.color.warning()! : R.color.osloGrey()!
+    
+      var missingDetails = ""
+      if self.username == nil || self.username?.count == 0 {
+        missingDetails += "username"
+      }
+      
+      if self.password == nil || self.password?.count == 0 {
+        if !missingDetails.isEmpty {
+          missingDetails += " and password are"
+        } else {
+          missingDetails += "password"
+        }
+      } else if !missingDetails.isEmpty {
+        missingDetails += " is"
+      }
+      
+      
       delegate?.loginViewModel(self,
                                updateTextFieldLineColor: usernameColor,
                                passwordColor: passwordColor)
       delegate?.loginViewModel(self,
                                showAlertControllerWithTitle: R.string.localizable.loginError(),
+                               message: R.string.localizable.yourInvalidKindlyCheckAndTryAgain(missingDetails))
+      return
+    }
+    
+    let filteredPersons = persons.filter { $0.username == username && $0.password == password }
+    guard let person = filteredPersons.first else {
+      
+      
+      delegate?.loginViewModel(self,
+                               showAlertControllerWithTitle: R.string.localizable.loginError(),
                                message: R.string.localizable.yourUsernameOrPasswordIsIncorrectKindlyCheckAndTryAgain())
       return
     }
+    
     
     
   }
@@ -83,7 +113,26 @@ class LoginViewModel: LoginViewModelType {
   }
   }
   
+  private var databaseManager: DatabaseManagerType
   private var isPasswordVisibilityOn: Bool = true
   private var isSecureTextEntry: Bool = true
+  private var persons = [Person]()
+  
+}
+
+private extension LoginViewModel {
+  
+  func savePersons() {
+
+    persons = databaseManager.read()
+    
+    for person in persons {
+      databaseManager.deleteByID(id: person.id)
+    }
+    
+    databaseManager.insert(id: 0, username: "admin",
+                           password: "admin")
+    persons = databaseManager.read()
+  }
   
 }

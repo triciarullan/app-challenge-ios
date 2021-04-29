@@ -9,6 +9,9 @@ PODS:
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
   - SnapKit (5.0.1)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
   - SVProgressHUD (2.2.5)
   - Swinject (2.6.2)
   - SwinjectStoryboard (2.2.0):
@@ -20,6 +23,7 @@ DEPENDENCIES:
   - Moya
   - R.swift (~> 5.1.0)
   - SnapKit
+  - SQLite.swift (~> 0.12.0)
   - SVProgressHUD
   - Swinject (~> 2.6.0)
   - SwinjectStoryboard
@@ -32,6 +36,7 @@ SPEC REPOS:
     - R.swift
     - R.swift.Library
     - SnapKit
+    - SQLite.swift
     - SVProgressHUD
     - Swinject
     - SwinjectStoryboard
@@ -43,10 +48,11 @@ SPEC CHECKSUMS:
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Swinject: cf7458774b1b00323080a9c67e47a1ee7f9d2af1
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: c9070be3e1c6d65411f5c6e6c9301456e9ed5306
+PODFILE CHECKSUM: cf46611750a9639a7990da92844d2c6602526201
 
 COCOAPODS: 1.10.1
