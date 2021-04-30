@@ -10,5 +10,4 @@ import Foundation
 enum Scene {
   case login
   case user
-  case userDetails
 }

@@ -589,13 +589,8 @@ struct _R: Rswift.Validatable {
 
       let bundle = R.hostingBundle
       let name = "Home"
-      let userDetailsViewController = StoryboardViewControllerResource<UserDetailsViewController>(identifier: "UserDetailsViewController")
       let userNavigationController = StoryboardViewControllerResource<UserNavigationController>(identifier: "UserNavigationController")
       let userViewController = StoryboardViewControllerResource<UserViewController>(identifier: "UserViewController")
-
-      func userDetailsViewController(_: Void = ()) -> UserDetailsViewController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: userDetailsViewController)
-      }
 
       func userNavigationController(_: Void = ()) -> UserNavigationController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: userNavigationController)
@@ -609,7 +604,6 @@ struct _R: Rswift.Validatable {
         if #available(iOS 11.0, tvOS 11.0, *) {
           if UIKit.UIColor(named: "cello", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'cello' is used in storyboard 'Home', but couldn't be loaded.") }
         }
-        if _R.storyboard.home().userDetailsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'userDetailsViewController' could not be loaded from storyboard 'Home' as 'UserDetailsViewController'.") }
         if _R.storyboard.home().userNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'userNavigationController' could not be loaded from storyboard 'Home' as 'UserNavigationController'.") }
         if _R.storyboard.home().userViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'userViewController' could not be loaded from storyboard 'Home' as 'UserViewController'.") }
       }

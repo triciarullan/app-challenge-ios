@@ -15,8 +15,6 @@ extension Scene {
       return loginViewController()
     case .user:
       return userViewController()
-    case .userDetails:
-      return userDetailsViewController()
     }
   }
 }
@@ -37,11 +35,6 @@ private extension Scene {
     let navigationController = resolve(UserNavigationController.self)
     navigationController.viewControllers = [controller]
     return navigationController
-  }
-  
-  func userDetailsViewController() -> UIViewController {
-    let controller = resolve(UserDetailsViewController.self)
-    return controller
   }
   
 }

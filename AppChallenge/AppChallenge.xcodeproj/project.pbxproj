@@ -283,12 +283,12 @@
 		107D07222639B1C300F2BCCC /* AppChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				107D07EE2639C7FF00F2BCCC /* Extensions */,
 				107D07572639B1EA00F2BCCC /* Features */,
 				10740CDE263B0CFC004DF4E6 /* Services */,
-				107D078F2639B57100F2BCCC /* Resources */,
 				107D07BF2639C39800F2BCCC /* Utilities */,
 				107D07A82639B66700F2BCCC /* Protocols */,
+				107D07EE2639C7FF00F2BCCC /* Extensions */,
+				107D078F2639B57100F2BCCC /* Resources */,
 				107D07232639B1C300F2BCCC /* AppDelegate.swift */,
 				107D072E2639B1C500F2BCCC /* LaunchScreen.storyboard */,
 				107D07312639B1C500F2BCCC /* Info.plist */,

@@ -32,14 +32,6 @@ struct HomeAssembly: Assembly {
       UserViewModel()
     }
     
-    container.register(UserDetailsViewController.self) {  _ in
-      let sb = SwinjectStoryboard.create(name: R.storyboard.home.name,
-                                         bundle: nil,
-                                         container: container)
-      let vc = sb.instantiateViewController(withIdentifier: R.storyboard.home.userDetailsViewController.identifier)
-      return vc as! UserDetailsViewController
-    }
-    
   }
   
 }
