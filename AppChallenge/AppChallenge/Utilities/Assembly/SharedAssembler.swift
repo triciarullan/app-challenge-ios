@@ -9,7 +9,9 @@ import Swinject
 import SwinjectStoryboard
 
 let SharedAssembler = Assembler([
-  LoginAssembly()
+  LoginAssembly(),
+  HomeAssembly(),
+  ServicesAssembly()
 ])
 
 func resolve<T>(_ type: T.Type, name: String? = nil) -> T {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: BaseViewController {
+class LoginViewController: BaseViewController, BindableType {
   
   @IBOutlet weak private var usernameTextFieldView: TextFieldView!
   @IBOutlet weak private var passwordTextFieldView: TextFieldView!
@@ -18,8 +18,17 @@ class LoginViewController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    bindViewModel()
     configureViews()
+  }
+  
+  func bindViewModel() {
+    viewModel.delegate = self
+    
+    usernameTextFieldView.viewModel = viewModel.getUserNameTextFieldViewModel()
+    usernameTextFieldView.delegate = self
+    passwordTextFieldView.viewModel = viewModel.getPasswordTextFieldViewModel()
+    passwordTextFieldView.textField.isSecureTextEntry = true
+    passwordTextFieldView.delegate = self
   }
   
   @IBAction func didTapLoginButton(_ sender: Any) {
@@ -33,16 +42,6 @@ private extension LoginViewController {
     loginButton.roundCorners()
   }
   
-  func bindViewModel() {
-    viewModel = LoginViewModel()
-    viewModel.delegate = self
-    
-    usernameTextFieldView.viewModel = viewModel.getUserNameTextFieldViewModel()
-    usernameTextFieldView.delegate = self
-    passwordTextFieldView.viewModel = viewModel.getPasswordTextFieldViewModel()
-    passwordTextFieldView.textField.isSecureTextEntry = true
-    passwordTextFieldView.delegate = self
-  }
 }
 
 
@@ -65,9 +64,21 @@ extension LoginViewController: TextFieldViewDelegate {
 }
 
 extension LoginViewController: LoginViewModelDelegate {
-  func loginViewModel(_ viewModel: LoginViewModelType, showAlertControllerWithTitle title: String, message: String) {
+  
+  func loginViewModelDismissLoadingView(_ viewModel: LoginViewModelType) {
+    dismissLoadingView()
+  }
+  
+  func loginViewModel(_ viewModel: LoginViewModelType,
+                      showAlertControllerWithTitle title: String,
+                      message: String) {
     showAlertController(title: title,
                         message: message)
+    dismissLoadingView()
+  }
+  
+  func loginViewModelShowLoadingView(_ viewModel: LoginViewModelType) {
+    showLoadingView()
   }
   
   func loginViewModel(_ viewModel: LoginViewModelType,

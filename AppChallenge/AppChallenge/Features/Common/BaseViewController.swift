@@ -28,6 +28,7 @@ class BaseViewController: UIViewController {
       SVProgressHUD.show(withStatus: text)
       SVProgressHUD.setDefaultMaskType(maskType)
       SVProgressHUD.setForegroundColor(foregroundColor)
+      SVProgressHUD.setBackgroundColor(.white)
     }
   }
   

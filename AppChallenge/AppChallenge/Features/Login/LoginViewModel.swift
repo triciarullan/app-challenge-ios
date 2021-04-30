@@ -17,6 +17,8 @@ protocol LoginViewModelDelegate {
   func loginViewModel(_ viewModel: LoginViewModelType,
                       showAlertControllerWithTitle title: String,
                       message: String)
+  func loginViewModelShowLoadingView(_ viewModel: LoginViewModelType)
+  func loginViewModelDismissLoadingView(_ viewModel: LoginViewModelType)
 }
 
 protocol LoginViewModelType {
@@ -54,6 +56,7 @@ class LoginViewModel: LoginViewModelType {
   
   func submitLogin() {
   
+    delegate?.loginViewModelShowLoadingView(self)
     guard let username = username, !username.isEmpty,
           let password = password, !password.isEmpty else {
       let usernameColor: UIColor = self.username?.isEmpty ?? true ? R.color.warning()! : R.color.osloGrey()!
@@ -85,16 +88,16 @@ class LoginViewModel: LoginViewModelType {
     }
     
     let filteredPersons = persons.filter { $0.username == username && $0.password == password }
-    guard let person = filteredPersons.first else {
-      
-      
+    guard let _ = filteredPersons.first else {
       delegate?.loginViewModel(self,
                                showAlertControllerWithTitle: R.string.localizable.loginError(),
                                message: R.string.localizable.yourUsernameOrPasswordIsIncorrectKindlyCheckAndTryAgain())
       return
     }
     
-    
+    delegate?.loginViewModelDismissLoadingView(self)
+    appDelegate.showHome()
+    appInfoHelper.appUserDefaults.setIsLoggedIn(true)
     
   }
   
@@ -117,6 +120,8 @@ class LoginViewModel: LoginViewModelType {
   private var isPasswordVisibilityOn: Bool = true
   private var isSecureTextEntry: Bool = true
   private var persons = [Person]()
+  private let appDelegate = UIApplication.shared.delegate as! AppDelegate
+  private let appInfoHelper = AppInfoHelper.shared
   
 }
 

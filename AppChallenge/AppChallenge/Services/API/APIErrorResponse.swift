@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct APIErrorResponse: Decodable {
+  var code = 0
+  var message: String?
+}

@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+protocol UserDetailsViewModelType {
+  
+}
+
+struct UserDetailsViewModel: UserDetailsViewModelType {
+  
+}

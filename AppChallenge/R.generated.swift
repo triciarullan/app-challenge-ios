@@ -90,12 +90,21 @@ struct R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
   struct storyboard {
+    /// Storyboard `Home`.
+    static let home = _R.storyboard.home()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Login`.
     static let login = _R.storyboard.login()
+
+    #if os(iOS) || os(tvOS)
+    /// `UIStoryboard(name: "Home", bundle: ...)`
+    static func home(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.home)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
@@ -318,10 +327,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
   struct nib {
     /// Nib `TextFieldView`.
     static let textFieldView = _R.nib._TextFieldView()
+    /// Nib `UserTableViewCell`.
+    static let userTableViewCell = _R.nib._UserTableViewCell()
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "TextFieldView", in: bundle)`
@@ -331,9 +342,29 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "UserTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.userTableViewCell) instead")
+    static func userTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.userTableViewCell)
+    }
+    #endif
+
     static func textFieldView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.textFieldView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
+
+    static func userTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UserTableViewCell? {
+      return R.nib.userTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UserTableViewCell
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  struct reuseIdentifier {
+    /// Reuse identifier `UserTableViewCell`.
+    static let userTableViewCell: Rswift.ReuseIdentifier<UserTableViewCell> = Rswift.ReuseIdentifier(identifier: "UserTableViewCell")
 
     fileprivate init() {}
   }
@@ -505,6 +536,20 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
 
+    struct _UserTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = UserTableViewCell
+
+      let bundle = R.hostingBundle
+      let identifier = "UserTableViewCell"
+      let name = "UserTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UserTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UserTableViewCell
+      }
+
+      fileprivate init() {}
+    }
+
     fileprivate init() {}
   }
   #endif
@@ -513,12 +558,50 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       #if os(iOS) || os(tvOS)
+      try home.validate()
+      #endif
+      #if os(iOS) || os(tvOS)
       try launchScreen.validate()
       #endif
       #if os(iOS) || os(tvOS)
       try login.validate()
       #endif
     }
+
+    #if os(iOS) || os(tvOS)
+    struct home: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = UserNavigationController
+
+      let bundle = R.hostingBundle
+      let name = "Home"
+      let userDetailsViewController = StoryboardViewControllerResource<UserDetailsViewController>(identifier: "UserDetailsViewController")
+      let userNavigationController = StoryboardViewControllerResource<UserNavigationController>(identifier: "UserNavigationController")
+      let userViewController = StoryboardViewControllerResource<UserViewController>(identifier: "UserViewController")
+
+      func userDetailsViewController(_: Void = ()) -> UserDetailsViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: userDetailsViewController)
+      }
+
+      func userNavigationController(_: Void = ()) -> UserNavigationController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: userNavigationController)
+      }
+
+      func userViewController(_: Void = ()) -> UserViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: userViewController)
+      }
+
+      static func validate() throws {
+        if #available(iOS 11.0, tvOS 11.0, *) {
+          if UIKit.UIColor(named: "cello", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'cello' is used in storyboard 'Home', but couldn't be loaded.") }
+        }
+        if _R.storyboard.home().userDetailsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'userDetailsViewController' could not be loaded from storyboard 'Home' as 'UserDetailsViewController'.") }
+        if _R.storyboard.home().userNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'userNavigationController' could not be loaded from storyboard 'Home' as 'UserNavigationController'.") }
+        if _R.storyboard.home().userViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'userViewController' could not be loaded from storyboard 'Home' as 'UserViewController'.") }
+      }
+
+      fileprivate init() {}
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
