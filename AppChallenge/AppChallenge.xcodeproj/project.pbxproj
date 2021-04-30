@@ -21,7 +21,6 @@
 		10740D46263B20AC004DF4E6 /* HomeWebServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10740D45263B20AC004DF4E6 /* HomeWebServiceType.swift */; };
 		10740D4E263B2101004DF4E6 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10740D4D263B2101004DF4E6 /* UserResponse.swift */; };
 		10740D56263B24AB004DF4E6 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10740D55263B24AB004DF4E6 /* UserViewController.swift */; };
-		10740D5B263B24C2004DF4E6 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10740D5A263B24C2004DF4E6 /* UserDetailsViewController.swift */; };
 		10740D60263B24DA004DF4E6 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10740D5F263B24DA004DF4E6 /* UserViewModel.swift */; };
 		10740D65263B24EA004DF4E6 /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10740D64263B24EA004DF4E6 /* UserDetailsViewModel.swift */; };
 		10740D6B263B25D9004DF4E6 /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10740D6A263B25D9004DF4E6 /* HomeAssembly.swift */; };
@@ -94,7 +93,6 @@
 		10740D45263B20AC004DF4E6 /* HomeWebServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWebServiceType.swift; sourceTree = "<group>"; };
 		10740D4D263B2101004DF4E6 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		10740D55263B24AB004DF4E6 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
-		10740D5A263B24C2004DF4E6 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		10740D5F263B24DA004DF4E6 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		10740D64263B24EA004DF4E6 /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
 		10740D6A263B25D9004DF4E6 /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
@@ -229,7 +227,6 @@
 			children = (
 				10740D77263B26E0004DF4E6 /* UserNavigationController.swift */,
 				10740D55263B24AB004DF4E6 /* UserViewController.swift */,
-				10740D5A263B24C2004DF4E6 /* UserDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -736,7 +733,6 @@
 				10740CE0263B0D0E004DF4E6 /* DatabaseManager.swift in Sources */,
 				10740D20263B1DFB004DF4E6 /* WebServiceError.swift in Sources */,
 				107D07242639B1C300F2BCCC /* AppDelegate.swift in Sources */,
-				10740D5B263B24C2004DF4E6 /* UserDetailsViewController.swift in Sources */,
 				10740D46263B20AC004DF4E6 /* HomeWebServiceType.swift in Sources */,
 				10740D6B263B25D9004DF4E6 /* HomeAssembly.swift in Sources */,
 				10740DD4263B3741004DF4E6 /* UserSectionModel.swift in Sources */,

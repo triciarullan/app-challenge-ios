@@ -33,7 +33,6 @@ struct WebService<U: TargetType>: WebServiceType {
       case let .success(response):
         do {
           let jsonResponse = try? JSONSerialization.jsonObject(with: response.data, options: [])
-          print(jsonResponse)
           let object = try JSONDecoder().decode(T.self, from: response.data)
           success?(object)
         } catch {

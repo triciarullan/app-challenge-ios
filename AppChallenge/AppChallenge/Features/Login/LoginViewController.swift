@@ -86,7 +86,6 @@ extension LoginViewController: LoginViewModelDelegate {
                       passwordColor: UIColor) {
     usernameTextFieldView.lineSeparatorView.backgroundColor = usernameColor
     passwordTextFieldView.lineSeparatorView.backgroundColor = passwordColor
-
   }
   
   func loginViewModel(_ viewModel: LoginViewModelType,

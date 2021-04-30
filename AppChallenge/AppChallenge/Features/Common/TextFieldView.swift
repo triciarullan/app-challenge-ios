@@ -68,6 +68,7 @@ class TextFieldView: UIView, NibLoadable {
   private func configureViews() {
     textField.delegate = self
     textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+  
   }
 
   private func bindViewModel() {
@@ -80,6 +81,11 @@ class TextFieldView: UIView, NibLoadable {
       rightButton.setImage(iconImage, for: .normal)
     }
     
+    let textFieldPlaceHolderFont = R.font.latoRegular(size: 15)!
+    let textFieldAttributes: [NSAttributedString.Key : Any] = [NSAttributedString.Key.foregroundColor: R.color.osloGrey()!,
+                                                               NSAttributedString.Key.font: textFieldPlaceHolderFont]
+    textField.attributedPlaceholder = NSAttributedString(string: viewModel.placeholderText,
+                                                         attributes: textFieldAttributes)
   }
 
   @objc private func textFieldDidChange(_ textField: UITextField) {

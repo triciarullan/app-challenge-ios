@@ -34,6 +34,7 @@ private extension UserViewController {
   
   func configureViews() {
     
+    title = viewModel.title
   }
   
   func registerViews() {

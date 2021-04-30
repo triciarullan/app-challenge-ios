@@ -22,15 +22,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
   
   func showLogin() {
-    let viewController = Scene.login.viewController()
-    window?.rootViewController = viewController
-    window?.makeKeyAndVisible()
+    DispatchQueue.main.async {
+      let viewController = Scene.login.viewController()
+      self.window?.rootViewController = viewController
+      self.window?.makeKeyAndVisible()
+    }
   }
   
   func showHome() {
-    let viewController = Scene.user.viewController()
-    window?.rootViewController = viewController
-    window?.makeKeyAndVisible()
+    DispatchQueue.main.async {
+      let viewController = Scene.user.viewController()
+      self.window?.rootViewController = viewController
+      self.window?.makeKeyAndVisible()
+    }
   }
   
 }

@@ -371,8 +371,10 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 7 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 8 localization keys.
     struct localizable {
+      /// Value: Email
+      static let email = Rswift.StringResource(key: "Email", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Loading
       static let loading = Rswift.StringResource(key: "Loading", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Login Error
@@ -381,12 +383,25 @@ struct R: Rswift.Validatable {
       static let ok = Rswift.StringResource(key: "Ok", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Password
       static let password = Rswift.StringResource(key: "Password", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Username
-      static let username = Rswift.StringResource(key: "Username", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Users
+      static let users = Rswift.StringResource(key: "Users", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Your %@ invalid. Kindly check and try again.
       static let yourInvalidKindlyCheckAndTryAgain = Rswift.StringResource(key: "Your %@ invalid. Kindly check and try again.", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Your username or password is incorrect. Kindly check and try again.
-      static let yourUsernameOrPasswordIsIncorrectKindlyCheckAndTryAgain = Rswift.StringResource(key: "Your username or password is incorrect. Kindly check and try again.", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Your email or password is incorrect. Kindly check and try again.
+      static let yourEmailOrPasswordIsIncorrectKindlyCheckAndTryAgain = Rswift.StringResource(key: "Your email or password is incorrect. Kindly check and try again.", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+
+      /// Value: Email
+      static func email(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("Email", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "Email"
+        }
+
+        return NSLocalizedString("Email", bundle: bundle, comment: "")
+      }
 
       /// Value: Loading
       static func loading(preferredLanguages: [String]? = nil) -> String {
@@ -440,17 +455,17 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("Password", bundle: bundle, comment: "")
       }
 
-      /// Value: Username
-      static func username(preferredLanguages: [String]? = nil) -> String {
+      /// Value: Users
+      static func users(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("Username", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("Users", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "Username"
+          return "Users"
         }
 
-        return NSLocalizedString("Username", bundle: bundle, comment: "")
+        return NSLocalizedString("Users", bundle: bundle, comment: "")
       }
 
       /// Value: Your %@ invalid. Kindly check and try again.
@@ -468,17 +483,17 @@ struct R: Rswift.Validatable {
         return String(format: format, locale: locale, value1)
       }
 
-      /// Value: Your username or password is incorrect. Kindly check and try again.
-      static func yourUsernameOrPasswordIsIncorrectKindlyCheckAndTryAgain(preferredLanguages: [String]? = nil) -> String {
+      /// Value: Your email or password is incorrect. Kindly check and try again.
+      static func yourEmailOrPasswordIsIncorrectKindlyCheckAndTryAgain(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("Your username or password is incorrect. Kindly check and try again.", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("Your email or password is incorrect. Kindly check and try again.", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "Your username or password is incorrect. Kindly check and try again."
+          return "Your email or password is incorrect. Kindly check and try again."
         }
 
-        return NSLocalizedString("Your username or password is incorrect. Kindly check and try again.", bundle: bundle, comment: "")
+        return NSLocalizedString("Your email or password is incorrect. Kindly check and try again.", bundle: bundle, comment: "")
       }
 
       fileprivate init() {}

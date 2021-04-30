@@ -41,7 +41,7 @@ class LoginViewModel: LoginViewModelType {
   }
   
   func getUserNameTextFieldViewModel() -> TextViewModel {
-    let viewModel = TextViewModel(placeholderText: R.string.localizable.username(),
+    let viewModel = TextViewModel(placeholderText: R.string.localizable.email(),
                                   leftIconImage: R.image.person()!)
     return viewModel
   }
@@ -57,26 +57,26 @@ class LoginViewModel: LoginViewModelType {
   func submitLogin() {
   
     delegate?.loginViewModelShowLoadingView(self)
-    guard let username = username, !username.isEmpty,
+    
+    guard isValidEmail(username),
           let password = password, !password.isEmpty else {
-      let usernameColor: UIColor = self.username?.isEmpty ?? true ? R.color.warning()! : R.color.osloGrey()!
+      let usernameColor: UIColor = isValidEmail(username) ? R.color.osloGrey()! : R.color.warning()!
       let passwordColor: UIColor = self.password?.isEmpty ?? true ? R.color.warning()! : R.color.osloGrey()!
     
       var missingDetails = ""
-      if self.username == nil || self.username?.count == 0 {
-        missingDetails += "username"
+      if !isValidEmail(self.username) {
+        missingDetails += "email"
       }
       
       if self.password == nil || self.password?.count == 0 {
         if !missingDetails.isEmpty {
           missingDetails += " and password are"
         } else {
-          missingDetails += "password"
+          missingDetails += "password is"
         }
       } else if !missingDetails.isEmpty {
         missingDetails += " is"
       }
-      
       
       delegate?.loginViewModel(self,
                                updateTextFieldLineColor: usernameColor,
@@ -91,13 +91,15 @@ class LoginViewModel: LoginViewModelType {
     guard let _ = filteredPersons.first else {
       delegate?.loginViewModel(self,
                                showAlertControllerWithTitle: R.string.localizable.loginError(),
-                               message: R.string.localizable.yourUsernameOrPasswordIsIncorrectKindlyCheckAndTryAgain())
+                               message: R.string.localizable.yourEmailOrPasswordIsIncorrectKindlyCheckAndTryAgain())
       return
     }
     
-    delegate?.loginViewModelDismissLoadingView(self)
-    appDelegate.showHome()
-    appInfoHelper.appUserDefaults.setIsLoggedIn(true)
+    DispatchQueue.main.async {
+      self.appDelegate.showHome()
+      self.delegate?.loginViewModelDismissLoadingView(self)
+      self.appInfoHelper.appUserDefaults.setIsLoggedIn(true)
+    }
     
   }
   
@@ -135,9 +137,22 @@ private extension LoginViewModel {
       databaseManager.deleteByID(id: person.id)
     }
     
-    databaseManager.insert(id: 0, username: "admin",
+    databaseManager.insert(id: 0,
+                           username: "admin@gmail.com",
                            password: "admin")
     persons = databaseManager.read()
+  }
+  
+  func isValidEmail(_ email: String?) -> Bool {
+    guard let email = email,
+          !email.isEmpty else {
+      return false
+    }
+    
+    let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+    
+    let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+    return emailPred.evaluate(with: email)
   }
   
 }

@@ -9,10 +9,12 @@
 "Loading" = "Loading";
 "Ok" = "Ok";
 
-"Username" = "Username";
+"Email" = "Email";
 "Password" = "Password";
 
 "Login Error" = "Login Error";
-"Your username or password is incorrect. Kindly check and try again." = "Your username or password is incorrect. Kindly check and try again.";
+"Your email or password is incorrect. Kindly check and try again." = "Your email or password is incorrect. Kindly check and try again.";
 
 "Your %@ invalid. Kindly check and try again." = "Your %@ invalid. Kindly check and try again.";
+
+"Users" = "Users";

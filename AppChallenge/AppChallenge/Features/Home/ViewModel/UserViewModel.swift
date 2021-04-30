@@ -17,6 +17,7 @@ protocol UserViewModelType {
   
   var delegate: UserViewModelDelegate? { get set }
   var sectionModels: [UserSectionModel] { get }
+  var title: String { get }
   
   func didSelect(at indexPath: IndexPath)
   func itemModel(at indexPath: IndexPath) -> UserSectionItemModel
@@ -45,6 +46,9 @@ class UserViewModel: UserViewModelType {
     appDelegate.showLogin()
   }
   
+  var title: String {
+    return R.string.localizable.users().uppercased()
+  }
   var delegate: UserViewModelDelegate?
   var sectionModels = [UserSectionModel]() {
     didSet {
